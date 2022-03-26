@@ -1,5 +1,6 @@
 // export const API_URL = 'https://dogsapi.origamid.dev/json';
-export const API_URL = 'http://loja2.local/json';
+// export const API_URL = 'http://loja2.local/json';
+export const API_URL = 'https://lucasapiloja.000webhostapp.com/json';
 
 export function TOKEN_POST(body) {
   return {
