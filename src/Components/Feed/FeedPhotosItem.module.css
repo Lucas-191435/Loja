@@ -1,0 +1,61 @@
+.produto:nth-child(2) {
+  grid-column: 2 / 4;
+  grid-row: span 2;
+}
+
+@media (max-width: 40rem) {
+  .produto:nth-child(2) {
+    grid-column: initial;
+    grid-row: initial;
+  }
+}
+
+.produto {
+  display: grid;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.produto > div {
+  grid-area: 1/1;
+}
+
+.produto h2{
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.produto p{
+  font-style: italic;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.visualizacao {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  grid-area: 1/1;
+  display: none;
+}
+
+.visualizacao::before {
+  width: 16px;
+  height: 10px;
+  content: '';
+  display: inline-block;
+  margin-right: 0.25rem;
+  background: url('../../Assets/visualizacao.svg') no-repeat;
+}
+
+.produto:hover .visualizacao {
+  display: flex;
+}
